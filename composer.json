@@ -1,0 +1,24 @@
+{
+    "name": "sturple/common",
+    "description": "Fifth Gear Marketing Common Utilities",
+    "keywords": ["utilities", "common"],
+    "homepage": "https://github.com/sturple/common",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Shawn Turple",
+            "email": "shawn@turple.ca"
+        },
+        {
+            "name": "Robert Leahy",
+            "email": "rleahy@rleahy.ca"
+        }
+    ],
+    "require": {
+    },
+    "minimum-stability": "dev",
+    "target-dir": "Fgms",
+    "autoload" : {
+        "psr-0" : {"Fgms" : ""}
+    }
+}

@@ -15,7 +15,8 @@
         }
     ],
     "require": {
-        "guzzlehttp/guzzle": "6.2"
+        "guzzlehttp/guzzle": "6.2",
+        "swiftmailer/swiftmailer": "^5.4"
     },
     "minimum-stability": "dev",
     "target-dir": "Fgms",

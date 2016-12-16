@@ -1,5 +1,6 @@
 {
     "name": "sturple/common",
+    "version" : "0.0.1",
     "description": "Fifth Gear Marketing Common Utilities",
     "keywords": ["utilities", "common"],
     "homepage": "https://github.com/sturple/common",
@@ -18,7 +19,6 @@
         "guzzlehttp/guzzle": "6.2",
         "swiftmailer/swiftmailer": "^5.4"
     },
-    "minimum-stability": "dev",
     "target-dir": "Fgms",
     "autoload" : {
         "psr-0" : {"Fgms" : ""}

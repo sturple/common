@@ -9,6 +9,7 @@ class Client implements ClientInterface
 {
     private $api_key;
     private $secret;
+    private $app_cred_array;
     private $store_name;
     private $client;
     private $token = null;
@@ -21,13 +22,36 @@ class Client implements ClientInterface
      * @param string $store_name
      * @param Client|null $client
      */
-    public function __construct($api_key, $secret, $store_name, \GuzzleHttp\Client $client = null)
+    public function __construct($api_key,$secret,$store_name, \GuzzleHttp\Client $client = null)
     {
         $this->api_key = $api_key;
         $this->secret = $secret;
         $this->store_name = $store_name;
+       // $this->app_cred_array = $app_cred_array;
         if (is_null($client)) $client = new \GuzzleHttp\Client();
         $this->client = $client;
+    }
+
+    /**
+     * Sets the store name
+     * @param string $store_name
+     *
+     **/
+    public function setAppCreds($appname){
+        foreach ($this->app_cred_array as $key=>$app_cred ){
+            if ($key == $appname) {
+                $this->api_key = $app_cred['api_key'];
+                $this->secret = $app_cred['secret'];                
+                break;
+            }
+        }
+        
+        return $this;
+    }
+    public function setStore($store_name)
+    {
+        $this->store_name = $store_name;
+        return $this;
     }
 
     /**
